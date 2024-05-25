@@ -1,1 +1,0 @@
-# algebraic-graph-matching
