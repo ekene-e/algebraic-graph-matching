@@ -7,10 +7,13 @@ Whichever comes last. Currently we have the following algorithms implemented:
     by Rabin and Vazirani (1989). This algorithm is a Monte Carlo algorithm (although it can be made into a Las Vegas algorithm
     by some smart parallelization) that finds a maximum matching in a graph in expected time $O(n^{\omega+1})$, where $n$ is
     the number of vertices in the graph. An implementation of this algorithm can be found in the `rabin_vazirani.py` file.
-* The [Mucha-Sankowski algorithm](https://web.eecs.umich.edu/~pettie/matching/Mucha-Sankowski-maximum-matching.pdf) by
-    Mucha and Sankowski (2004). This algorithm is a Las Vegas algorithm that finds a maximum matching in a graph in time
-    $O(n^{\omega})$, where $n$ is the number of vertices in the graph. An implementation of this algorithm can be found in
-    the `mucha_sankowski.py` file.
+* The [Mucha-Sankowski algorithm](https://web.eecs.umich.edu/~pettie/matching/Mucha-Sankowski-maximum-matching-matrix-multiplication.pdf) by
+    Mucha and Sankowski (2004). Here, there are really two algorithms: first, one that brings the runtime of the Rabin-Vazirani
+    algorithm down to $O(n^3)$ by applying the elimination theorem from linear algebra on the inverse of the Tutte matrix of the
+    graph, and second, an algorithm for bipartite graphs that brings the runtime down to $O(n^{\omega})$ by pivoting and testing
+    whether an entry of the Edmonds matrix (an analogue of the Tutte matrix for bipartite graphs) is zero. An implementation of
+    the first algorithm can be found in the `mucha_sankowski_general.py` file, while an implementation of the second algorithm
+    can be found in the `mucha_sankowski_bipartite.py` file.
 * [Harvey's algorithm](https://web.eecs.umich.edu/~pettie/matching/Harvey-maximum-matching-j-version.pdf) by Nicholas Harvey
     (2009). This algorithm finds a maximum matching in a graph in time $O(n^{\omega})$, improving upon the ideas from earlier
     work in this area by smartly choosing which areas of the Tutte matrix are worth updating first (as the matching is
