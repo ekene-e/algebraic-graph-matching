@@ -25,3 +25,10 @@ Whichever comes last. Currently we have the following algorithms implemented:
     matching in the graph in expected time $O(Kn^{\omega-1})$, where $n$ is the number of vertices in the graph and $\omega$
     is the matrix multiplication constant. An implementation of this algorithm can be found in the `bentert_heeger_koana.py`
     file.
+
+Also we have implemented the much more well-known (combinatorial) [blossom algorithm](https://en.wikipedia.org/wiki/Blossom_algorithm)
+by Edmonds (1965) for finding a maximum matching in a graph. This algorithm is implemented in the `edmonds_blossom.py`
+file.
+
+A nice resource for finding many matching algorithms is what I like to call the [Matching Algorithms Zoo](https://web.eecs.umich.edu/~pettie/matching/)
+by Seth Pettie.
