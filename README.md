@@ -30,5 +30,5 @@ Also we have implemented the much more well-known (combinatorial) [blossom algor
 by Edmonds (1965) for finding a maximum matching in a graph. This algorithm is implemented in the `edmonds_blossom.py`
 file.
 
-A nice resource for finding many matching algorithms is [Matching Algorithms Zoo](https://web.eecs.umich.edu/~pettie/matching/)
+A nice resource for finding many matching algorithms is the [Matching Algorithms Zoo](https://web.eecs.umich.edu/~pettie/matching/)
 by Seth Pettie.
